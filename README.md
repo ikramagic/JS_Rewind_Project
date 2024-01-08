@@ -1,3 +1,6 @@
+<p align="center"><img src="millionnaire_100.png" alt="Millionnaire 100" width="200" height="200"></p>
+
+
 <p align="center">
   <a href="https://ikramagic.github.io/Loto_JavaScript/">
     <img src="guitar_rage.gif" alt="Button 1" width="100" height="100">
