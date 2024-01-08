@@ -21,3 +21,16 @@ const books = [
   const allBooksRented = books.every(book => book.rented > 0);
   console.log(allBooksRented);
   
+  // Question 3
+  const mostRentedBook = books.reduce((maxRented, currentBook) => (currentBook.rented > maxRented.rented) ? currentBook : maxRented);
+  console.log(mostRentedBook);
+  
+  // Question 4
+  const leastRentedBook = books.reduce((minRented, currentBook) => (currentBook.rented < minRented.rented) ? currentBook : minRented);
+  console.log(leastRentedBook);
+  
+  // Question 5
+  const bookToRemoveId = 133712;
+  const booksAfterRemoval = books.filter(book => book.id !== bookToRemoveId);
+  console.log(booksAfterRemoval);
+  
