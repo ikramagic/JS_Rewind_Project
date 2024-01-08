@@ -39,3 +39,27 @@ const users = [
   
   console.log('Revenue by country:', revenueByCountry);
   
+  // Question 8
+  const uniqueCountries = [...new Set(users.map(user => user.country))];
+  console.log('Countries where we made money:', uniqueCountries);
+  
+  // Question 9
+  const top5UsersByRevenue = users.sort((a, b) => b.revenue - a.revenue).slice(0, 5);
+  console.log('Top 5 users by revenue:', top5UsersByRevenue);
+  
+  // Question 10
+  const revenueByGender = users.reduce((revenueByGender, user) => {
+    revenueByGender[user.gender] = (revenueByGender[user.gender] || 0) + user.revenue;
+    return revenueByGender;
+  }, {});
+  
+  console.log('Revenue by gender:', revenueByGender);
+  
+  // Question 11
+  const usersWithAtLeast75Revenue = users.filter(user => user.revenue >= 75);
+  console.log('Users with at least 75 cents revenue:', usersWithAtLeast75Revenue);
+  
+  // Question 12
+  const first100UsersPercentagePaying = (users.slice(0, 100).filter(user => user.revenue > 0).length / 100) * 100;
+  console.log(`Percentage of paying users among the first 100 users: ${first100UsersPercentagePaying}%`);
+  
